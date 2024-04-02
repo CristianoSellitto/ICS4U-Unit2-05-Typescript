@@ -17,12 +17,12 @@ export class Vehicle {
 
   // Creates the base vehicle
   public constructor(
-    startPlateNumber: string, startColour: string, startDoors: int, startSpeed: number, startMaxSpeed: number
+    startColour: string, startPlateNumber: string,startDoors: int, startMaxSpeed: number
   ) {
     this.licensePlateNumber = startPlateNumber
     this.colour = startColour
     this.doors = startDoors
-    this.speed = startSpeed
+    this.speed = 0
     this.maxSpeed = startMaxSpeed
   }
 
@@ -59,6 +59,17 @@ export class Vehicle {
   // Sets the license plate number of the vehicle
   public set licensePlateNumber(newPlateNumber: string) {
     this.licensePlateNumber = newPlateNumber
+  }
+
+  // Creates a string about the status of the car
+  public get status() {
+    let statusString = ` -> Speed: ${this.speed}\n`
+    statusString += ` -> MaxSpeed: ${this.maxSpeed}\n`
+    statusString += ` -> Number of doors: ${this.doors}\n`
+    statusString += ` -> License Plate: ${this.licensePlateNumber}\n`
+    statusString += ` -> Color: ${this.colour}`
+
+    return statusString
   }
 
   // Accelerates the car, changing the speed

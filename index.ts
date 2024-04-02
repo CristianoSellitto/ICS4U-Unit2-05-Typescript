@@ -1,80 +1,67 @@
 /**
-*
-* This program creates multiple vehicles and changes their speed
-*
-* By:      Cristiano Sellitto
-* Version: 1.0
-* Since:   2024-03-28
-*/
+* This is the main code that runs
+ * with the Vehicle Class.
+ * By:      Mr Coxall
+ * Version: 1.0
+ * Since:   2020-01-01
+ */
 
-import { Vehicle } from './Vehicle'
+import { Vehicle } from './Vehicle.ts'
 
-// Create a ford focus
-console.log('Creating a Ford Focus...')
-const fordFocus = new Vehicle('B40-C4RR0', 'white', 4, 0, 284)
-// Modifier variables
-let accelPower = 10
-let accelTime = 10
-let newColour = 'black'
-console.log(`- License plate number: ${fordFocus.licensePlateNumber}`)
-console.log(`- Vehicle colour: ${fordFocus.colour}`)
-console.log(`- Number of doors: ${fordFocus.doors}`)
-console.log(`- Current speed: ${fordFocus.speed}`)
-console.log(`- Maximum speed: ${fordFocus.maxSpeed}`)
-console.log(`Accelerating the car for ${accelTime} seconds with a power of ${accelPower}`)
-fordFocus.accelerate(accelPower, accelTime)
+console.log('Created Ford focus')
+const fordFocus = new Vehicle('white', 'B40-C4RR0', 4, 284)
+
+console.log('Status:')
+console.log(fordFocus.status)
+
+console.log('Accelerating, 10 of power for 10 sec.')
+fordFocus.accelerate(10, 10)
 console.log(`New speed: ${fordFocus.speed}`)
-console.log(`Changing the colour to ${newColour}`)
-fordFocus.colour = newColour
-console.log(`New colour: ${fordFocus.colour}`)
 
-// Create a ferrari
-console.log('\nCreating a Ferrari...')
-const ferrari = new Vehicle('VHD-35HU', 'red', 2, 0, 320)
-// Modifier variables
-accelPower = 100
-accelTime = 4
-let brakePower = 10
-let brakeTime = 10
-newColour = 'racing red!'
-console.log(`- License plate number: ${ferrari.licensePlateNumber}`)
-console.log(`- Vehicle colour: ${ferrari.colour}`)
-console.log(`- Number of doors: ${ferrari.doors}`)
-console.log(`- Current speed: ${ferrari.speed}`)
-console.log(`- Maximum speed: ${ferrari.maxSpeed}`)
-console.log(`Accelerating the car for ${accelTime} seconds with a power of ${accelPower}`)
-ferrari.accelerate(accelPower, accelTime)
+console.log('Changing colour to black:')
+fordFocus.color = 'black'
+console.log(`New color: ${fordFocus.color}`)
+
+console.log('')
+
+// new Ferrari
+console.log('Created a Ferrari')
+const ferrari = new Vehicle('red', 'VHD-35HU', 2, 320)
+
+console.log('Status:')
+console.log(ferrari.status)
+
+console.log('Accelerating, 100 of power for 4 sec.')
+ferrari.accelerate(100, 4)
 console.log(`New speed: ${ferrari.speed}`)
-console.log(`Breaking the car for ${brakeTime} seconds with a power of ${brakePower}`)
-ferrari.brake(brakePower, brakeTime)
+
+console.log('Brakeing, 10 of power for 10 sec.')
+ferrari.brake(10, 10)
 console.log(`New speed: ${ferrari.speed}`)
-console.log(`Changing the colour to ${newColour}`)
-ferrari.colour = newColour
-console.log(`New colour: ${ferrari.colour}`)
 
-// Create a citroen ami
-console.log('\nCreating a Citroen Ami...')
-const citroenAmi = new Vehicle('FS-695-DQ', 'blue', 2, 0, 45)
-// Modifier variables
-accelPower = 5
-accelTime = 10
-brakePower = 2
-brakeTime = 10
-newColour = 'purple'
-console.log(`- License plate number: ${citroenAmi.licensePlateNumber}`)
-console.log(`- Vehicle colour: ${citroenAmi.colour}`)
-console.log(`- Number of doors: ${citroenAmi.doors}`)
-console.log(`- Current speed: ${citroenAmi.speed}`)
-console.log(`- Maximum speed: ${citroenAmi.maxSpeed}`)
-console.log(`Accelerating the car for ${accelTime} seconds with a power of ${accelPower}`)
-citroenAmi.accelerate(accelPower, accelTime)
-console.log(`New speed: ${citroenAmi.speed}`)
-console.log(`Breaking the car for ${brakeTime} seconds with a power of ${brakePower}`)
-citroenAmi.brake(brakePower, brakeTime)
-console.log(`New speed: ${citroenAmi.speed}`)
-console.log(`Changing the colour to ${newColour}`)
-citroenAmi.colour = newColour
-console.log(`New colour: ${citroenAmi.colour}`)
+console.log('Changing color:')
+ferrari.color = 'racing red!'
+console.log(`New color: ${ferrari.color}`)
 
-// Show the program as done
+console.log('')
+
+// new Citroen Ami
+console.log('Created a Citroen Ami')
+const citroenAmi = new Vehicle('blue', 'FS-695-DQ', 2, 45)
+
+console.log('Status:')
+console.log(citroenAmi.status)
+
+console.log('Accelerating, 5 of power for 10 sec.')
+citroenAmi.accelerate(5, 10)
+console.log(`New speed: ${citroenAmi.speed}`)
+
+console.log('Brakeing, 2 of power for 10 sec.')
+citroenAmi.brake(2, 10)
+console.log(`New speed: ${citroenAmi.speed}`)
+
+console.log('Changing color:')
+citroenAmi.color = 'purple'
+console.log(`New color: ${citroenAmi.color}`)
+
 console.log('\nDone.')
