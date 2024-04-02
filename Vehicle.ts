@@ -56,11 +56,6 @@ export class Vehicle {
     this.colour = newColour
   }
 
-  // Sets the license plate number of the vehicle
-  public set licensePlateNumber(newPlateNumber: string) {
-    this.licensePlateNumber = newPlateNumber
-  }
-
   // Creates a string about the status of the car
   public get status() {
     let statusString = ` -> Speed: ${this.speed}\n`
@@ -70,6 +65,11 @@ export class Vehicle {
     statusString += ` -> Color: ${this.colour}`
 
     return statusString
+  }
+
+  // Sets the license plate number of the vehicle
+  public set licensePlateNumber(newPlateNumber: string) {
+    this.licensePlateNumber = newPlateNumber
   }
 
   // Accelerates the car, changing the speed
