@@ -17,7 +17,7 @@ export class Vehicle {
 
   // Creates the base vehicle
   public constructor(
-    startColour: string, startPlateNumber: string,startDoors: int, startMaxSpeed: number
+    startColour: string, startPlateNumber: string, startDoors: int, startMaxSpeed: number
   ) {
     this.licensePlateNumber = startPlateNumber
     this.colour = startColour
